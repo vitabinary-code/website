@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:web/constants.dart';
+import 'package:web/homescreen.dart';
+import 'package:web/page2.dart';
 import 'package:web/responsive.dart';
 
 /*--------------------  Side menu --------------------------------------- */
@@ -148,8 +150,22 @@ class Header extends StatelessWidget {
             if (!isMobile(context))
               Row(
                 children: <Widget>[
-                  NavItem(title: 'Home', tapEvent: () {}),
-                  NavItem(title: 'Coding', tapEvent: () {}),
+                  NavItem(
+                      title: 'Home',
+                      tapEvent: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeScreen()));
+                      }),
+                  NavItem(
+                      title: 'Coding',
+                      tapEvent: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeScreen2()));
+                      }),
                   NavItem(title: 'Contact us', tapEvent: () {}),
                 ],
               ),
