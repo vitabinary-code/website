@@ -19,11 +19,21 @@ class SideMenu extends StatelessWidget {
           padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
-              NavItem(title: 'Home', tapEvent: () {}),
+              NavItem(
+                  title: 'Home',
+                  tapEvent: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                  }),
               SizedBox(
                 width: 30,
               ),
-              NavItem(title: 'Coding', tapEvent: () {}),
+              NavItem(
+                  title: 'Coding',
+                  tapEvent: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeScreen2()));
+                  }),
               SizedBox(
                 width: 30,
               ),
