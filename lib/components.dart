@@ -18,9 +18,13 @@ class SideMenu extends StatelessWidget {
           child: Column(
             children: <Widget>[
               NavItem(title: 'Home', tapEvent: () {}),
-              SizedBox(width: 30,),
+              SizedBox(
+                width: 30,
+              ),
               NavItem(title: 'Coding', tapEvent: () {}),
-              SizedBox(width: 30,),
+              SizedBox(
+                width: 30,
+              ),
               NavItem(title: 'Contact us', tapEvent: () {}),
             ],
           ),
@@ -161,7 +165,13 @@ class Header extends StatelessWidget {
 }
 
 class Jumbotron extends StatelessWidget {
-  const Jumbotron({Key key}) : super(key: key);
+  final String title;
+  final String title2;
+  final Function press;
+  final Function press2;
+
+  const Jumbotron(this.title, this.press, this.title2, this.press2, {Key key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -237,16 +247,16 @@ class Jumbotron extends StatelessWidget {
                     runSpacing: 10,
                     children: <Widget>[
                       MainButton(
-                        title: 'GET STARTED',
-                        tapEvent: () {},
+                        title: title,
+                        tapEvent: press,
                         color: PrimaryColor,
                       ),
                       SizedBox(
                         width: 10,
                       ),
                       MainButton(
-                        title: 'WATCH VIDEO',
-                        tapEvent: () {},
+                        title: title2,
+                        tapEvent: press2,
                         color: SecondaryColor,
                       ),
                     ],
