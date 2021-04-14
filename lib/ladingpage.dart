@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:web/components.dart';
-import 'package:web/page2.dart';
+import 'package:web/components/jumpbar.dart';
+import 'package:web/codingpage.dart';
+import 'package:web/components/sidemenu.dart';
+import 'package:web/components/footermenu.dart';
+import 'package:web/components/headermenu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -25,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Header(),
-                Jumbotron("Watch Video", () {}, "Get Started", () {
+                Jumpbar("Watch Video", () {}, "Get Started", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HomeScreen2()));
                 }),

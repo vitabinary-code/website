@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:web/components.dart';
+import 'package:web/components/headermenu.dart';
+import 'package:web/components/sidemenu.dart';
+import 'package:web/components/footermenu.dart';
 
 class HomeScreen2 extends StatelessWidget {
   const HomeScreen2({Key key}) : super(key: key);
