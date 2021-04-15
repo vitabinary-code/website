@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web/usermunu.dart';
 
 import 'package:web/components/headermenu.dart';
 import 'package:web/components/sidemenu.dart';
@@ -27,6 +28,7 @@ class HomeScreen2 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Header(),
+                GidMenu(),
                 Footer(),
               ],
             ),
